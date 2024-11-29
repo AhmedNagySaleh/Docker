@@ -1,7 +1,7 @@
 Docker Intallation on Ubuntu Steps
 -----------------------------------
 From ubuntu Terminal issue:
-  01. sudo apt update                                                                                                                                             // update the index or hash from repository.
+  	01. sudo apt update                                                                                                                                             // update the index or hash from repository.
 	02. sudo apt install curl                                                                                                                                       // install tool curl to download any app.
 	03. sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg [download.docker.com] | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg                // Download docker from the link added and gpg key to check on signature, also added to specific path /etc/apt/trusted.gpg.d/docker.gpg.
 	04. sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu [download.docker.com] $(lsb_release -cs) stable"  // Add the repository for Docker to be able to find its index.
@@ -20,7 +20,7 @@ Download Apache image:
 
 Other Method to install Docker:
 	1. curl -fsSL  https://get.docker.com [get.docker.com] -o get-docker.sh
-  2. sudo sh get-docker.sh
+  	2. sudo sh get-docker.sh
 
 
 Copy & Paste one-time to Ubuntu Terminal:
