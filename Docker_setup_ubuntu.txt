@@ -10,7 +10,7 @@ From ubuntu Terminal issue:
 	07. sudo apt -y install docker-ce docker-ce-cli containerd.io [containerd.io] docker-compose-plugin docker-registry                                             // Install Docker CE: Community Edition.
 	08. sudo usermod -aG docker $USER                                                                                                                               // To add Users to Docker Group to be able to use commands and tools of docker.
 	09. newgrp docker                                                                                                                                               // To refresh docker group. 
-	10. docker compose version                                                                                                                                      // To install docker compose version.
+	10. docker compose version                                                                                                                                      // To check docker compose version.
 	11. systemctl status docker.service                                                                                                                             // To check the status of Docker.
 
 Download Apache image:
