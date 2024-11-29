@@ -1,0 +1,42 @@
+Docker Intallation on Ubuntu Steps
+-----------------------------------
+From ubuntu Terminal issue:
+  01. sudo apt update                                                                                                                                             // update the index or hash from repository.
+	02. sudo apt install curl                                                                                                                                       // install tool curl to download any app.
+	03. sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg [download.docker.com] | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg                // Download docker from the link added and gpg key to check on signature, also added to specific path /etc/apt/trusted.gpg.d/docker.gpg.
+	04. sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu [download.docker.com] $(lsb_release -cs) stable"  // Add the repository for Docker to be able to find its index.
+	05. sudo apt update                                                                                                                                             // Update index after downloading Docker repository.
+	06. sudo apt -y install lsb-release gnupg apt-transport-https ca-certificates curl software-properties-common                                                   // Docker dependences to be Installed & -y option: system install without asking yes or no.
+	07. sudo apt -y install docker-ce docker-ce-cli containerd.io [containerd.io] docker-compose-plugin docker-registry                                             // Install Docker CE: Community Edition.
+	08. sudo usermod -aG docker $USER                                                                                                                               // To add Users to Docker Group to be able to use commands and tools of docker.
+	09. newgrp docker                                                                                                                                               // To refresh docker group. 
+	10. docker compose version                                                                                                                                      // To install docker compose version.
+	11. systemctl status docker.service                                                                                                                             // To check the status of Docker.
+
+Download Apache image:
+	1. docker pull httpd
+	2. docker images
+
+
+Other Method to install Docker:
+	1. curl -fsSL  https://get.docker.com [get.docker.com] -o get-docker.sh
+  2. sudo sh get-docker.sh
+
+
+Copy & Paste one-time to Ubuntu Terminal:
+-----------------------------------------
+sudo apt update
+sudo apt install curl
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg
+sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt -y install lsb-release gnupg apt-transport-https ca-certificates curl software-properties-common
+sudo apt -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-registry
+sudo usermod -aG docker $USER
+newgrp docker
+
+docker compose version
+systemctl status docker.service
+
+docker pull httpd
+docker images
